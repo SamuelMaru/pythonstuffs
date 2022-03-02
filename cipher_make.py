@@ -19,7 +19,7 @@ def encrypt(text, shift=0):
             elif 65 > ord(i) + shift:
                 parts.append(chr(91 - (64 - (ord(i) + shift))))
             else:
-                parts.append(chr(65 - (ord(i) - 122)))
-        else:
+                parts.append(chr(65 - (ord(i) - 90)))
+        elif i not in [chr(ele) for ele in range(65,91)]+[chr(ele) for ele in range(97,123)]:
             raise ValueError("Invalid characters.")
     return "".join(parts)
