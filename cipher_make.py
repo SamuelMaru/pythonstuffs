@@ -1,3 +1,7 @@
+"""
+Caesar Cipher enciphering and deciphering
+"""
+
 def encipher(text, shift=0):
     """
     :param text: must be made up of characters in the english alphabet
