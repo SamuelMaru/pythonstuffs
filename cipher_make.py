@@ -4,6 +4,8 @@ def encipher(text, shift=0):
     :param shift: must be an integer
     :return: n/a
     """
+    if shift > 25:
+        shift %= 26
     parts = []
     for i in text:
         if i.islower():
@@ -33,6 +35,8 @@ def decipher(text, shift=0):
     :param shift: must be an integer
     :return: n/a
     """
+    if shift > 25:
+        shift %= 26
     shift = 0-shift
     parts = []
     for i in text:
