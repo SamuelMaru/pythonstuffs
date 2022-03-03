@@ -20,9 +20,12 @@ def encipher(text, shift=0):
                 parts.append(chr(91 - (64 - (ord(i) + shift))))
             else:
                 parts.append(chr(65 - (ord(i) - 90)))
+        elif i ==" ":
+            parts.append(i)
         elif i not in [chr(ele) for ele in range(65,91)]+[chr(ele) for ele in range(97,123)]:
             raise ValueError("Invalid characters.")
     return "".join(parts)
+
 
 def decipher(text, shift=0):
     """
@@ -47,6 +50,8 @@ def decipher(text, shift=0):
                 parts.append(chr(91 - (64 - (ord(i) + shift))))
             else:
                 parts.append(chr(65 - (ord(i) - 90)))
+        elif i ==" ":
+            parts.append(i)
         elif i not in [chr(ele) for ele in range(65,91)]+[chr(ele) for ele in range(97,123)]:
             raise ValueError("Invalid characters.")
     return "".join(parts)
