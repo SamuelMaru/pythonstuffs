@@ -1,6 +1,3 @@
-"""
-Caesar Cipher enciphering and deciphering
-"""
 def encipher(text, shift=0):
     all_letters = [chr(ele) for ele in range(65, 91)] + [
         chr(ele) for ele in range(97, 123)
